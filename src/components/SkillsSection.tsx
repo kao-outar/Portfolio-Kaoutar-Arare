@@ -30,11 +30,10 @@ const SkillsSection: React.FC = () => {
       icon: "server-icon",
       skills: [
         { name: "PHP", level: 75 },
-        { name: "Node.js", level: 75 },
+        { name: "Node.js", level: 65 },
         { name: "Python", level: 70 },
-        { name: "Ruby", level: 65 },
-        { name: "Express", level: 70 },
-        { name: "WordPress/Shopify", level: 80 }
+        { name: "Symfony", level: 80 },
+        { name: "WordPress/Shopify", level: 100 }
       ]
     },
     {
@@ -54,11 +53,7 @@ const SkillsSection: React.FC = () => {
     { name: "Responsive Design", icon: "responsive-icon" },
     { name: "UX/UI Design", icon: "uxui-icon" },
     { name: "SEO", icon: "seo-icon" },
-    { name: "TypeScript", icon: "typescript-icon" },
-    { name: "GraphQL", icon: "graphql-icon" },
-    { name: "Docker", icon: "docker-icon" },
-    { name: "PWA", icon: "pwa-icon" },
-    { name: "CI/CD", icon: "cicd-icon" }
+    { name: "TypeScript", icon: "typescript-icon" }
   ];
 
   return (

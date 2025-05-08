@@ -51,7 +51,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar openContactModal={openContactModal} />
+      <Navbar />
       <HeroSection />
       <ProjectsSection />
       <AboutSection />

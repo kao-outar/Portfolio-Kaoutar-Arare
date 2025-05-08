@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 interface NavbarProps {
-  openContactModal: () => void;
+  // La prop openContactModal n'est plus nécessaire
 }
 
-const Navbar: React.FC<NavbarProps> = ({ openContactModal }) => {
+const Navbar: React.FC<NavbarProps> = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ openContactModal }) => {
         <a href="#projets">Projets</a>
         <a href="#apropos">À propos</a>
         <a href="#competences">Compétences</a>
-        <button className="contact-btn" onClick={openContactModal}>Contact</button>
+        <a href="#contact" className="contact-link">Contact</a>
       </div>
     </nav>
   );

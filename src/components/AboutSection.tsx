@@ -1,4 +1,5 @@
 import React from 'react';
+import './CustomIcons.css';
 
 interface ExperienceItem {
   period: string;
@@ -65,15 +66,15 @@ const AboutSection: React.FC = () => {
               
               <div className="passions-grid">
                 <div className="passion-item">
-                  <div className="passion-icon heart-icon"></div>
+                  <div className="passion-icon book-icon"></div>
                   <div className="passion-content">
-                    <h4>Romance</h4>
-                    <p>Passionnée par les romans de romance comme 'It Ends with Us' et 'A Wedding in Provence'.</p>
+                    <h4>Romans</h4>
+                    <p>Passionnée de lecture et de romans.</p>
                   </div>
                 </div>
                 
                 <div className="passion-item">
-                  <div className="passion-icon game-icon"></div>
+                  <div className="passion-icon gamepad-icon"></div>
                   <div className="passion-content">
                     <h4>Jeux Vidéo</h4>
                     <p>Joueuse sur Nintendo Switch et PC (Valorant, Fortnite).</p>
@@ -81,7 +82,7 @@ const AboutSection: React.FC = () => {
                 </div>
                 
                 <div className="passion-item">
-                  <div className="passion-icon anime-icon"></div>
+                  <div className="passion-icon manga-icon"></div>
                   <div className="passion-content">
                     <h4>Anime & Manga</h4>
                     <p>Fan de culture japonaise et des œuvres de Studio Ghibli.</p>
@@ -89,26 +90,18 @@ const AboutSection: React.FC = () => {
                 </div>
                 
                 <div className="passion-item">
-                  <div className="passion-icon cat-icon"></div>
+                  <div className="passion-icon pet-icon"></div>
                   <div className="passion-content">
-                    <h4>Chats</h4>
-                    <p>Grande amatrice de chats et propriétaire d'un adorable félin.</p>
+                    <h4>Animaux</h4>
+                    <p>J'aime les animaux et j'ai un petit hamster qui s'appelle Pika.</p>
                   </div>
                 </div>
                 
                 <div className="passion-item">
-                  <div className="passion-icon art-icon"></div>
+                  <div className="passion-icon palette-icon"></div>
                   <div className="passion-content">
                     <h4>Art</h4>
                     <p>Je dessine régulièrement et pratique le nail art.</p>
-                  </div>
-                </div>
-                
-                <div className="passion-item">
-                  <div className="passion-icon book-icon"></div>
-                  <div className="passion-content">
-                    <h4>Littérature</h4>
-                    <p>Lectrice assidue, avec un penchant pour les histoires touchantes.</p>
                   </div>
                 </div>
               </div>

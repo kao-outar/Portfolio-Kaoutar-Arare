@@ -10,7 +10,7 @@ interface ProjectCardProps {
   tags: Tag[];
   projectLink: string;
   codeLink: string;
-  imageUrl?: string;
+  imageUrl?: string | { default: string } | any;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -25,11 +25,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="project-card">
       <div className="project-image">
         {imageUrl ? (
-          <img src={imageUrl} alt={title} />
+          <img src={imageUrl} alt={title} onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.style.display = 'none';
+            const div = document.createElement('div');
+            div.textContent = title;
+            div.className = 'project-placeholder';
+            e.currentTarget.parentNode?.appendChild(div);
+          }} />
         ) : (
           <div className="project-placeholder">
-            {title === "E-commerce Sakura" && <div>E-commerce Sakura</div>}
-            {title === "Application Ghibli Fans" && <div>Application Ghibli Fans</div>}
+            <div>{title}</div>
           </div>
         )}
       </div>
@@ -42,14 +48,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           ))}
         </div>
         <div className="project-links">
-          <a href={codeLink} className="github-link" aria-label="Code source">
-            <i className="github-icon"></i>
-          </a>
-          <a href={projectLink} className="external-link" aria-label="Voir le projet">
+          <a href={projectLink} className="external-link" target="_blank" rel="noopener noreferrer" aria-label="Voir le projet">
             <i className="external-icon"></i>
-          </a>
-          <a href={`/details/${title.toLowerCase().replace(/ /g, '-')}`} className="details-link">
-            Détails <span className="arrow-icon">→</span>
           </a>
         </div>
       </div>
