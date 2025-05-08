@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
+import ContactSection from './components/ContactSection';
 import ContactModal from './components/ContactModal';
 import Footer from './components/Footer';
 
@@ -55,6 +56,7 @@ function App() {
       <ProjectsSection />
       <AboutSection />
       <SkillsSection />
+      <ContactSection />
       <Footer />
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </div>

@@ -44,16 +44,10 @@ const AboutSection: React.FC = () => {
         </div>
         
         <div className="about-content">
-          <div className="about-image-container">
-            <div className="about-bg-image"></div>
-            <div className="about-img bubble-top">
-              <div className="setup-text">
-                My favorite<br />setup gaming rose
-              </div>
-            </div>
-            <div className="about-img bubble-main"></div>
-            <div className="about-img bubble-bottom">
-              <img src="/images/peluches-chat.jpg" alt="Collection de peluches et chat" />
+          <div className="about-image-container" style={{ position: "relative" }}>
+            <div className="about-bg-image" style={{ backgroundImage: "url('/images/setup.jpg')", backgroundSize: "cover", backgroundPosition: "center", transform: "rotate(-90deg)" }}></div>
+            <div className="about-img bubble-main" style={{ position: "absolute", bottom: "20px", right: "20px", transform: "translateX(0) translateY(0)" }}>
+              <img src={require("../assets/images/me1.png")} alt="Kaoutar" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "50%" }} />
             </div>
           </div>
           
